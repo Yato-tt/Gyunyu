@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Waifu Pics API</title>
+  </head>
+  <body>
+    <header id="topo">
+      <h1>Olá Onii-chan!</h1>
+    </header>
+    <main>
+      <div id="search">
+        <div class="tipo">
+          <label for="sfw"
+            ><input
+              type="radio"
+              name="type"
+              id="tipo-sfw"
+              value="sfw"
+            />SFW</label
+          >
+
+          <label for="nsfw"
+            ><input
+              type="radio"
+              name="type"
+              id="tipo-nsfw"
+              value="nsfw"
+            />NSFW</label
+          >
+        </div>
+        <input
+          type="text"
+          id="categoria"
+          placeholder="ex: waifu, neko, etc. . ."
+        />
+      </div>
+      <input type="button" id="searchWaifu" value="Buscar" />
+    </main>
+    <div id="pictureWaifu"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

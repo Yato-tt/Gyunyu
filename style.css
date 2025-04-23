@@ -1,0 +1,98 @@
+ * {
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     list-style: none;
+ }
+
+ body {
+     width: 30em;
+     background: rgb(0, 0, 0, 0.5);
+     margin: 0 auto;
+ }
+
+ #topo {
+     color: white;
+     text-align: center;
+     background: url('https://i.pinimg.com/originals/cb/75/52/cb75527c4116a3072232e2539ea04670.gif') no-repeat;
+     height: 150px;
+ }
+
+ main {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ #search {
+     width: 70%;
+     background: white;
+     align-items: center;
+     border-radius: .75em;
+     padding: .5em;
+ }
+
+ #search input#categoria {
+     width: 100%;
+
+ }
+
+ input[type="text"] {
+     color: #3333;
+     width: 10em;
+     border-radius: 0.5em;
+     border: 1px solid white;
+     transition: width 0.4s ease-in-out;
+ }
+
+ input[type="text"]:focus,
+ input[type="text"]:hover {
+     border: 2px solid black;
+     width: 20%;
+ }
+
+ input[type="radio"],
+ input[type="checkbox"] {
+     accent-color: purple;
+ }
+
+ input[type="button"] {
+     width: 6em;
+     background: white;
+     border-radius: 0.5em;
+     border: 1px solid white;
+     transition: width 0.4s ease-in-out;
+     margin-top: .5em;
+ }
+
+ input[type="button"]:hover {
+     width: 12em;
+     color: white;
+     background: #8888;
+     border: 2px solid black;
+ }
+
+ .tipo {
+     display: flex;
+     justify-content: space-around;
+ }
+
+ #pictureWaifu {
+     display: flex;
+     color: white;
+     justify-content: center;
+ }
+
+ .waifu-card {
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     padding: 1rem;
+     margin: 1rem 0;
+     text-align: center;
+ }
+
+ .waifu-card img {
+     max-width: 100%;
+     height: auto;
+     border-radius: 1rem;
+ }
