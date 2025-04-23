@@ -6,26 +6,18 @@
  }
 
  body {
-     width: 30em;
      background: rgb(0, 0, 0, 0.5);
-     margin: 0 auto;
- }
-
- #topo {
-     color: white;
-     text-align: center;
-     background: url('https://i.pinimg.com/originals/cb/75/52/cb75527c4116a3072232e2539ea04670.gif') no-repeat;
-     height: 150px;
  }
 
  main {
      display: flex;
      flex-direction: column;
      align-items: center;
+     padding: 1rem;
  }
 
  #search {
-     width: 70%;
+     width: 80%;
      background: white;
      align-items: center;
      border-radius: .75em;
@@ -48,6 +40,7 @@
  input[type="text"]:focus,
  input[type="text"]:hover {
      border: 2px solid black;
+     color: black;
      width: 20%;
  }
 
@@ -77,6 +70,14 @@
      justify-content: space-around;
  }
 
+ .nsfw {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-weight: 600;
+     font-size: .8rem;
+ }
+
  #pictureWaifu {
      display: flex;
      color: white;
@@ -84,7 +85,7 @@
  }
 
  .waifu-card {
-     border: 1px solid #ccc;
+     border: 1px solid transparent;
      border-radius: 5px;
      padding: 1rem;
      margin: 1rem 0;

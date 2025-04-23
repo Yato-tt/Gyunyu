@@ -7,9 +7,6 @@
     <title>Waifu Pics API</title>
   </head>
   <body>
-    <header id="topo">
-      <h1>Olá Onii-chan!</h1>
-    </header>
     <main>
       <div id="search">
         <div class="tipo">
@@ -17,7 +14,7 @@
             ><input
               type="radio"
               name="type"
-              id="tipo-sfw"
+              id="safety"
               value="sfw"
             />SFW</label
           >
@@ -26,14 +23,16 @@
             ><input
               type="radio"
               name="type"
-              id="tipo-nsfw"
+              id="safety"
               value="nsfw"
             />NSFW</label
           >
         </div>
+        <div id="flags"></div>
         <input
-          type="text"
+          type="radio"
           id="categoria"
+          style="display: none"
           placeholder="ex: waifu, neko, etc. . ."
         />
       </div>
