@@ -1,4 +1,4 @@
-async function fetchData(tipo, categoria) {
+  async function fetchData(tipo, categoria) {
     try {
         const response = await fetch(`https://api.waifu.pics/${tipo}/${categoria}`);
         if (!response.ok) {
@@ -14,7 +14,7 @@ async function fetchData(tipo, categoria) {
 }
 
 function displayWaifu(waifus) {
-    const container = document.querySelector('#pictureWaifu')
+    const container = document.querySelector('#pictureWaifu');
     container.innerHTML = '';
     
     if (waifus && waifus.url) {
@@ -72,16 +72,22 @@ radios.forEach(radio => {
 });
 
 document.querySelector('#searchWaifu').addEventListener('click', async () => {
-    const tipo = document.querySelector('input[name="type"]:checked');
-    const categoria = document.querySelector('input[name="nosafe"]:checked');
 
-    // const categoria = document.getElementById('categoria').value;
+const container = document.querySelector('#pictureWaifu');
+container.innerHTML = '<img src="./oppais-loading.gif" alt="request image" />';
+
+const tipo = document.querySelector('input[name="type"]:checked');
+    const categoria = document.querySelector('input[name="nosafe"]:checked');
 
     if (!tipo) {
         alert('Selecione ao menos um tipo!');
+        return;
+    } else if (!categoria) {
+        alert ('Vocé é tapado? Selecione a categoria!');
         return;
     }
 
     const data = await fetchData(tipo.value, categoria.value); // Usa o valor do tipo selecionado
     displayWaifu(data);
+    
 });
