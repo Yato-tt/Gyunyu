@@ -7,11 +7,11 @@
 
  body {
      /*background: rgb(0, 0, 0, 0.5);*/
-         background-image: url('./background.gif');
-         background-position: center;
-         background-repeat: no-repeat;
-         background-size: cover;
-         height: 100vh;
+     background-image: url('./assets/imgs/background.gif');
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100vh;
  }
 
  main {
@@ -22,11 +22,24 @@
  }
 
  #search {
+     position: relative;
      width: 80%;
      background: rgba(255, 255, 255, .5);
      align-items: center;
-     border-radius: .75em;
-     padding: .5em;
+     border-radius: .85em;
+     padding: .8em;
+ }
+
+ #search::before {
+     background: rgba(255, 255, 255, .5);
+     content: "";
+     width: 100%;
+     height: 100%;
+     filter: blur(12px) brightness(50%);
+     position: absolute;
+     z-index: -1;
+     left: 0;
+     top: 0;
  }
 
  #search input#categoria {
@@ -55,19 +68,32 @@
  }
 
  input[type="button"] {
-     width: 6em;
-     background: rgba(255, 255, 255, .5);
-     border-radius: 0.5em;
-     border: 1px solid white;
-     transition: width 0.4s ease-in-out;
-     margin-top: .5em;
+     display: none;
  }
 
- input[type="button"]:hover {
-     width: 12em;
-     color: white;
-     background: #8888;
-     border: 2px solid black;
+ .busca {
+     position: fixed;
+     top: 88%;
+     right: 6%;
+     padding: 1.8rem 1rem;
+     border-radius: 100%;
+     background: rgba(255, 255, 255, .5);
+     z-index: 2;
+ }
+
+ .clear {
+     position: fixed;
+     top: 80%;
+     right: 6%;
+     padding: 1.2rem .6rem;
+     border-radius: 100%;
+     background: rgba(255, 255, 255, .5);
+     z-index: 2;
+ }
+
+ .busca:hover,
+ .clear:hover {
+     background: rgba(255, 255, 255, .8);
  }
 
  .tipo {
@@ -84,27 +110,37 @@
  }
 
  #pictureWaifu {
-     display: flex;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 5px;
+     padding: .5rem;
      color: white;
-     justify-content: center;
  }
 
-#pictureWaifu img {
-    border-radius: 1rem;
-}
+ #pictureWaifu img {
+     border-radius: 1rem;
+     width: 100%;
+     height: auto;
+ }
 
  .waifu-card {
      border: 1px solid transparent;
      border-radius: 5px;
-     padding: 1rem;
-     margin: 1rem 0;
-    transition: ease-in-out .5s;
+     padding: .25rem;
+     transition: ease-in-out .5s;
+ }
+
+ .waifu-card:hover {
+     transform: scale(1.03);
  }
 
  .waifu-card img {
-     width: 100%;
-     height: 50vh;
-     padding: .25rem;
      border-radius: 1rem;
      border: 1px solid rgba(255, 255, 255, .5);
+ }
+
+ @media (min-width: 769px) {
+     #pictureWaifu {
+         grid-template-columns: repeat(4, 1fr);
+     }
  }
